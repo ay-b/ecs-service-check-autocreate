@@ -1,0 +1,18 @@
+{
+  "checks": {
+    "ecs-bar-check-service": {
+      "command": "/opt/sensu/embedded/bin/check-ecs-service-health.rb -r $AWS_REGION_NAME -c foo -s bar -w",
+      "handlers": [
+        "logstash",
+        "victorops"
+      ],
+      "subscribers": [
+        "sensu-agent"
+      ],
+      "wiki": "https://github.com/SpotIM/admin",
+      "interval": 60,
+      "occurrences": 5,
+      "refresh": 60
+    }
+  }
+}
