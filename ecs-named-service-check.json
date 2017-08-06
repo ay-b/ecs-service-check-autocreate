@@ -1,6 +1,6 @@
 {
   "checks": {
-    "ecs-bar-check-service": {
+    "foo-bar-check-service": {
       "command": "/opt/sensu/embedded/bin/check-ecs-service-health.rb -r $AWS_REGION_NAME -c foo -s bar -w",
       "handlers": [
         "logstash",
